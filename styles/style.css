@@ -79,7 +79,7 @@ hr {
 }
 
 /* ////////////////////////////////////////////////////////////////////////// */
-/* Animation Section  */
+/* Animation Section (Bat & Ball) */
 /* ////////////////////////////////////////////////////////////////////////// */
 
 .animation-container {
@@ -88,6 +88,8 @@ hr {
   text-align: left;
   border-radius: 10px;
   border: 5px solid #3887be;
+
+  height: 500px;
 }
 .animation-container:hover #bat {
   transform: rotate(-60deg);
@@ -111,4 +113,53 @@ hr {
   left: 527px;
   bottom: 200px;
   transition: transform 0.5s ease-out.25s;
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/* Animation Section (Key Frame) */
+/* ////////////////////////////////////////////////////////////////////////// */
+@keyframes bounse {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 630px;
+  }
+}
+@keyframes bounsing {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 157px;
+    top: 330px;
+  }
+  50% {
+    left: 315px;
+    top: 0px;
+  }
+  75% {
+    left: 472px;
+    top: 330px;
+  }
+  100% {
+    left: 630px;
+    top: 0px;
+  }
+}
+.bounsing-ball-field {
+  width: 700px;
+  height: 400px;
+  background-color: #52d3d8;
+  border: 5px solid #3887be;
+}
+.bounsing-ball {
+  width: 70px;
+  height: 70px;
+  margin: 0px;
+  background-color: #3887be;
+  border-radius: 50%;
+  position: relative;
+  animation: bounsing 5s ease-in-out 1ms infinite;
 }
