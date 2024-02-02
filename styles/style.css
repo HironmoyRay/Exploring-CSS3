@@ -61,9 +61,9 @@ hr {
 .inner-box p {
   padding: 3rem;
 }
-.inner-box:hover {
-  transform: translateX(300px) scale(1.5);
-}
 .outer-box:hover {
   transform: scale(0.75);
+}
+.outer-box:hover .inner-box {
+  transform: translateX(300px) scale(1.5);
 }
