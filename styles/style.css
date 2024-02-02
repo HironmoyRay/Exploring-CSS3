@@ -6,13 +6,15 @@
   margin: 20px auto;
 }
 .description {
-  width: 700px;
+  width: 350px;
   margin: 0 auto;
   padding: 20px;
   border-radius: 10px;
   border: 5px solid #3887be;
 }
-
+h2 {
+  margin-top: 50px;
+}
 hr {
   border: 5px solid #38419d;
 }
@@ -20,16 +22,18 @@ hr {
 /* /////////////////////////////////////////////////////////////////////////// */
 /* Overflow Sections */
 /* /////////////////////////////////////////////////////////////////////////// */
+.overflow {
+  display: flex;
+}
 #ellipse {
   width: 300px;
-  border: 3px solid #52d3d8;
+  border: 4px solid #3887be;
 }
 .ellipse {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .para-1 {
   height: 200px;
   overflow: scroll;
@@ -41,8 +45,13 @@ hr {
 }
 
 /* ////////////////////////////////////////////////////////////////////////// */
-/* Animation Section  */
+/* Transition Section  */
 /* ////////////////////////////////////////////////////////////////////////// */
+
+.box-container {
+  display: flex;
+  margin-top: 100px;
+}
 .box {
   width: 200px;
   height: 150px;
@@ -60,10 +69,46 @@ hr {
 }
 .inner-box p {
   padding: 3rem;
+  margin: 0px;
 }
 .outer-box:hover {
   transform: scale(0.75);
 }
 .outer-box:hover .inner-box {
-  transform: translateX(300px) scale(1.5);
+  transform: translatey(-100px) scale(1.5);
+}
+
+/* ////////////////////////////////////////////////////////////////////////// */
+/* Animation Section  */
+/* ////////////////////////////////////////////////////////////////////////// */
+
+.animation-container {
+  margin: 50px 100px;
+  padding: 20px;
+  text-align: left;
+  border-radius: 10px;
+  border: 5px solid #3887be;
+}
+.animation-container:hover #bat {
+  transform: rotate(-60deg);
+  transform-origin: top right;
+}
+.animation-container:hover .ball {
+  transform: translate(690px, -327px);
+}
+
+#bat {
+  width: 300px;
+  transition: transform 0.25s ease-in;
+}
+.ball {
+  width: 70px;
+  height: 70px;
+  margin: 0px;
+  background-color: red;
+  border-radius: 50%;
+  position: relative;
+  left: 527px;
+  bottom: 200px;
+  transition: transform 0.5s ease-out.25s;
 }
